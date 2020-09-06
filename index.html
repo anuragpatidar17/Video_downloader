@@ -55,9 +55,9 @@
    <div class="row">
    <div class="col-sm-12">  
     
-  <input type="text" class="form-control" id="URL-input" aria-describedby="basic-addon3" placeholder="Paste the URL">
+  <input type="text" class="form-control" id="URL-input"  placeholder="Paste the URL">
   <br>
-   <button type="button" class="btn btn-primary" id="convert-button">Download</button>
+   <button type="button" class="btn btn-primary" id="download-button">Download</button>
 </div>
 </div>
   
@@ -65,17 +65,23 @@
 </body>
 
 <script>
-	var convertBtn = document.querySelector('#convert-button');
-var URLinput = document.querySelector('#URL-input');
-convertBtn.addEventListener('click', () => {
+	var downloadBtn = document.querySelector('#download-button');
+    var URLinput = document.querySelector('#URL-input');
+    downloadBtn.addEventListener('click', () => {
+
     console.log(`URL: ${URLinput.value}`);
     sendURL(URLinput.value);
+   
+   
 });
 
 function sendURL(URL) {
-   window.location.href = `https://booombooom.herokuapp.com/download?URL=${URL}`;
+   window.location.href = `http://localhost:4002/download?URL=${URL}`;
+  
 }
 
+
+document.getElementById('URL-input').value = '';
 
 </script>
 
