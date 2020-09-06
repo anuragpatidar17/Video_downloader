@@ -2,6 +2,20 @@
 <html>
 <head>
     <title>YouTube Downloader</title>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
     <style type="text/css">
     	* {
     text-align: center;
@@ -31,22 +45,45 @@
     background: #0485ff;
     color:white;
 }
+
+
     </style>
+
 </head>
 
 
 
 <body>
-    <h1 class="heading">Boom Boom downloader</h1>
-    <input class="URL-input" placeholder="Paste the URL">
-    <button class="convert-button">Convert</button>
+	<div class="container">
+		<div class="row">
+  
+  <div class="col-sm-12">  
+  	<h1 class="heading">Boom Boom downloader</h1>
+  	<br><br>
+  </div>
+</div>
+   
+   <div class="row">
+   <div class="col-sm-12">  
+    
+  <input type="text" class="form-control" id="URL-input" aria-describedby="basic-addon3" placeholder="Paste the URL">
+  <br>
+   <button type="button" class="btn btn-primary" id="convert-button">Download</button>
+</div>
+</div>
+
+   
+  
+
+  
+</div>
 </body>
 
 
 <script>
 	
-var convertBtn = document.querySelector('.convert-button');
-var URLinput = document.querySelector('.URL-input');
+var convertBtn = document.querySelector('#convert-button');
+var URLinput = document.querySelector('#URL-input');
 convertBtn.addEventListener('click', () => {
     console.log(`URL: ${URLinput.value}`);
     sendURL(URLinput.value);
