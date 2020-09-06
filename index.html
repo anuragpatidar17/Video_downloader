@@ -14,15 +14,13 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-
-
-    <style type="text/css">
+ <style type="text/css">
     	* {
     text-align: center;
 }
 .heading {
     font-family: Arial;
-    margin-top:40vh;
+    margin-top:20vh;
 }
 .URL-input, .convert-button {
     font-size:1.3em;
@@ -39,18 +37,9 @@
 .URL-input:focus {
     border:2px solid #0485ff;
 }
-.convert-button {
-    border-radius:0px 4px 4px 0px;
-    border:2px solid #0485ff;
-    background: #0485ff;
-    color:white;
-}
-
-
-    </style>
+   </style>
 
 </head>
-
 
 
 <body>
@@ -71,18 +60,12 @@
    <button type="button" class="btn btn-primary" id="convert-button">Download</button>
 </div>
 </div>
-
-   
-  
-
   
 </div>
 </body>
 
-
 <script>
-	
-var convertBtn = document.querySelector('#convert-button');
+	var convertBtn = document.querySelector('#convert-button');
 var URLinput = document.querySelector('#URL-input');
 convertBtn.addEventListener('click', () => {
     console.log(`URL: ${URLinput.value}`);
